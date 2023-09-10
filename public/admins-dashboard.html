@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admins-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Admin's Dashboard</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="recipes-feed.html">Feed</a></li>
+        <li><a href="add-recipe.html">Add Recipe</a></li>
+        <li><a href="search-friends.html">Search Friends</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="our-vision.html">Our Vision</a></li>
+    </ul>
+    <ul>
+        <li><a href="admins-dashboard.html" class="admin-permission" hidden="hidden">Admin's Dashboard</a></li>
+    </ul>
+    <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="logout">Logout</a></li>
+    </ul>
+</nav>
+<main class="profile-main">
+    <div class="container feed-container">
+        <div class="tab">
+            <div class="tab-buttons">
+                <div class="tab-buttons-left">
+                    <button class="tab-header" onclick="showTab(0)">Users</button>
+                    <button class="tab-header" onclick="showTab(1)">Recipes</button>
+                </div>
+                <div class="tab-buttons-right">
+                    <button class="tab-header" onclick="showTab(2)">Logs</button>
+                </div>
+            </div>
+
+            <hr id="profile-hr">
+
+            <div class="tab-content" id="tab--adminUsers">
+                <ul class="feed-list profile--list-item" id="admin--users-list"></ul>
+            </div>
+
+            <div class="tab-content" id="tab--adminRecipes">
+                <ul class="feed-list profile--list-item" id="admin--recipes-list"></ul>
+            </div>
+
+            <div class="tab-content" id="tab--adminLogs">
+                <ul class="feed-list profile--list-item" id="admin--logs-list"></ul>
+            </div>
+
+        </div>
+    </div>
+</main>
+<script src="adminsDashboard.js"></script>
+</body>
+</html>

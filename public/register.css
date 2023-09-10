@@ -1,0 +1,150 @@
+body, h1, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 20px auto; /* Adjusted margin */
+    padding: 20px;     /* Adjusted padding */
+    width: 90%;       /* Increased width for mobile */
+    max-width: 800px; /* Set a max-width for larger screens */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container, .register-container {
+    margin: auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5em;  /* Adjusted size */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for full width */
+    width: 100%;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1em; /* Adjusted size */
+}
+
+input[type="text"], input[type="password"], .file-label {
+    flex-grow: 1;
+    padding: 10px; /* Adjusted padding */
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    width: calc(100% - 30px);
+}
+
+.file-label {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    font-weight: normal;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.file-label:hover {
+    background-color: darkorange;
+}
+
+input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding */
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+/* Additional styles */
+#register-message {
+    color: red;
+    margin-top: 20px;  /* Adjusted margin */
+    font-size: 1em;   /* Adjusted size */
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
+    input[type="submit"] {
+        padding: 20px 40px;
+        font-size: 20px;
+    }
+
+    #register-message {
+        font-size: 1.2em;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="recipes-feed.html">Feed</a></li>
+        <li><a href="add-recipe.html">Add Recipe</a></li>
+        <li><a href="search-friends.html">Search Friends</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="our-vision.html">Our Vision</a></li>
+    </ul>
+    <ul>
+        <li><a href="admins-dashboard.html" class="admin-permission" hidden="hidden">Admin's Dashboard</a></li>
+    </ul>
+    <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="logout">Logout</a></li>
+    </ul>
+</nav>
+<main class="profile-main">
+    <div class="profile-info">
+        <img id="profile-picture-img" class="profile-picture">
+        <h1 class="profile-label" id="user-name-label"></h1>
+        <h3 class="profile-label" id="email-label"></h3>
+    </div>
+    <div class="container feed-container">
+        <div class="tab">
+            <div class="tab-buttons">
+                <div class="tab-buttons-left">
+                    <button class="tab-header" onclick="showTab(0)">My Recipes</button>
+                    <button class="tab-header" onclick="showTab(1)">Followers</button>
+                    <button class="tab-header" onclick="showTab(2)">Following</button>
+                </div>
+                <div class="tab-buttons-right">
+                    <button class="tab-header" onclick="showTab(3)">Edit Information</button>
+                </div>
+            </div>
+
+            <hr id="profile-hr">
+
+            <div class="tab-content" id="tab--myRecipes">
+                <ul class="feed-list profile--list-item" id="profile--myRecipe-list"></ul>
+            </div>
+
+            <div class="tab-content" id="tab--followers">
+                <ul class="feed-list profile--list-item" id="profile--followers-list"></ul>
+            </div>
+
+            <div class="tab-content" id="tab--following">
+                <ul class="feed-list profile--list-item" id="profile--following-list"></ul>
+            </div>
+
+            <div class="tab-content" id="tab--editInfo">
+
+                <form id="profile--editPicture-form" enctype="multipart/form-data">
+                    <label class="regular-label">Edit profile picture:</label>
+                    <label id="edit-file-label" for="edit-profile-picture" class="file-label">Choose a new profile picture</label>
+                    <input type="file" id="edit-profile-picture" name="edit-profile-picture" class="file-input" accept="image/*">
+                    <input type="submit" value="Save profile picture">
+                </form>
+
+                <hr>
+                <form id="profile--editInfo-form">
+                    <label class="regular-label">Edit profile information:</label>
+
+                    <label for="editFirstName">First name:</label>
+                    <input type="text" id="editFirstName" name="editFirstName" required>
+
+                    <label for="editLastName">Last name:</label>
+                    <input type="text" id="editLastName" name="editLastName" required>
+
+                    <label for="editEmail">Email address:</label>
+                    <input type="text" id="editEmail" name="editEmail" required disabled="disabled">
+
+                    <label for="editPassword">Password:</label>
+                    <input type="password" id="editPassword" name="editPassword" required>
+
+                    <label for="editConfirmPassword">Confirm password:</label>
+                    <input type="password" id="editConfirmPassword" name="editConfirmPassword" required>
+
+                    <input type="submit" value="Save changes">
+                </form>
+                <p class="message" id="edit-info-message"></p>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="profile.js"></script>
+</body>
+</html>

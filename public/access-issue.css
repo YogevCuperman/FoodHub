@@ -1,0 +1,49 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.access-issue-main {
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.access-issue-main h1 {
+    color: #e74c3c;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.access-issue-main h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.photo {
+    max-width: 50%;
+    margin-bottom: 2rem;
+}
+
+#redirectButton {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;  /* Make it block so it can be centered with margin */
+    margin: 0 auto;  /* Center the block element */
+    max-width: 200px;  /* Or whatever max width you prefer */
+}
+
+#redirectButton:hover {
+    background-color: orangered;
+}

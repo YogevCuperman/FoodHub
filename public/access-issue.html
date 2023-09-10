@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="access-issue.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>ERROR</title>
+</head>
+<body>
+    <main class="access-issue-main">
+        <h1>Error - unable to access :(</h1>
+        <h2>You need to log-in or have admins permissions to reach this page</h2>
+        <img src="error.jpg" alt="error" class="photo">
+        <button id="redirectButton">Log-in</button>
+    </main>
+<script>
+    function goHome() {
+        window.location.href = 'index.html'
+    }
+
+    document.getElementById("redirectButton").addEventListener('click', goHome)
+</script>
+</body>
+</html>

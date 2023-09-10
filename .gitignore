@@ -1,0 +1,7 @@
+.idea/
+node_modules/
+database.db
+images/
+Tickets.xlsx
+~.xlsx
+\~\$Tickets.xlsx

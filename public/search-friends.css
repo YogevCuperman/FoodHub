@@ -1,0 +1,128 @@
+body, h1, h3, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;  /* Separates the two lists */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-main {
+    max-width: 1000px;
+    margin: 2% auto;
+    background-color: #ffffff;
+    padding: 1%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search-box-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#search-friends-box {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #e7e7e7;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+#search-friends-button, .liking-button {
+    padding: 0.5rem 1rem;
+    background-color: darkorange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-friends-button:hover, .liking-button:hover {
+    background-color: orangered;
+}
+
+.results-list {
+    list-style: none;
+}
+
+.search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-username {
+    font-weight: bold;
+}
+
+.liking-button:disabled {
+    background-color: darkgray;
+    cursor: not-allowed;
+}
+.buttons-div > button:not(:last-child) {
+    margin-right: 15px;
+}
+
+/* Media Queries for smaller screens, such as mobile devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        margin-bottom: 0.5rem;
+    }
+
+    .search-main {
+        padding: 2%;
+    }
+
+    #search-box-div {
+        flex-direction: column;
+    }
+
+    #search-friends-box {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

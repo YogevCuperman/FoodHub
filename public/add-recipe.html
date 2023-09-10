@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="add-recipe.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Add Recipe</title>
+</head>
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="recipes-feed.html">Feed</a></li>
+    <li><a href="add-recipe.html">Add Recipe</a></li>
+    <li><a href="search-friends.html">Search Friends</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="our-vision.html">Our Vision</a></li>
+  </ul>
+  <ul>
+    <li><a href="admins-dashboard.html" class="admin-permission" hidden="hidden">Admin's Dashboard</a></li>
+  </ul>
+  <ul>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="logout">Logout</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="container feed-container add-recipe-container">
+    <div class="inner-container">
+    <h1>Add Recipe</h1>
+    <form id="add-recipe-form" enctype="multipart/form-data">
+      <label for="recipeName">Recipe name:</label>
+      <input type="text" id="recipeName" name="recipeName" required>
+
+      <span id="button-span">
+        <label id="recipe-picture-label" for="recipe-picture" class="file-label">Upload dish picture</label>
+        <input type="file" id="recipe-picture" name="recipe-picture" class="file-input" accept="image/*" required hidden="hidden">
+      </span>
+
+
+      <div class="options-section">
+        <h4 class="group-label">Dish kind:</h4>
+        <div class="options-container">
+          <span class="option-item">
+            <input type="radio" id="option-starter" name="dishKind" value="Starter" required>
+            <label for="option-starter" class="option-item-label">Starter dish</label>
+          </span>
+
+          <span class="option-item">
+            <input type="radio" id="option-main" name="dishKind" value="Main dish">
+            <label for="option-main" class="option-item-label">Main dish</label>
+          </span>
+
+          <span class="option-item">
+            <input type="radio" id="option-dessert" name="dishKind" value="Dessert">
+            <label for="option-dessert" class="option-item-label">Dessert</label>
+          </span>
+        </div>
+      </div>
+
+      <span class="horizontal-span">
+        <h4>Cooking Time (in minutes):</h4>
+        <input type="number" min="1" value="5" id="cooking-time-indicator" name="cookingTime">
+      </span>
+
+
+
+      <div class="options-section">
+        <h4 class="group-label">Restrictions:</h4>
+        <div class="options-container">
+          <span class="option-item">
+            <input type="checkbox" id="option-vegan" name="foodRestrictions" value="Vegan">
+            <label for="option-vegan" class="option-item-label">Vegan</label>
+          </span>
+
+          <span class="option-item">
+            <input type="checkbox" id="option-vegetarian" name="foodRestrictions" value="Vegetarian">
+            <label for="option-vegetarian" class="option-item-label">Vegetarian</label>
+          </span>
+
+          <span class="option-item">
+            <input type="checkbox" id="option-glutenfree" name="foodRestrictions" value="Gluten-Free">
+            <label for="option-glutenfree" class="option-item-label">Gluten Free</label>
+          </span>
+
+          <span class="option-item">
+            <input type="checkbox" id="option-dairy" name="foodRestrictions" value="Dairy">
+            <label for="option-dairy" class="option-item-label">Dairy</label>
+          </span>
+        </div>
+      </div>
+
+        <h4 class="group-label">Ingredients:</h4>
+        <textarea class="free-content-text-box" rows="3" name="ingredients" required></textarea>
+
+        <h4 class="group-label">Instructions:</h4>
+        <textarea class="free-content-text-box" rows="15" name="instructions" required></textarea>
+
+
+      <input type="submit" value="Post your recipe">
+    </form>
+    <p class="message" id="add-recipe-message"></p>
+    </div>
+  </div>
+</main>
+<script src="addRecipe.js"></script>
+</body>
+</html>

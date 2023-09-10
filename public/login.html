@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="our-vision.html">Our Vision</a></li>
+  </ul>
+  <ul></ul>
+</nav>
+
+<main>
+<div class="container">
+<!--  <h1>Login</h1>-->
+  <h1>Welcome to FoodHub!</h1>
+  <h3>Please log-in:</h3>
+  <form id="login-form">
+    <label for="email">Username:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label>
+      <input type="checkbox" id="remember-me" name="rememberMe" checked="checked"> Remember me
+    </label>
+
+    <button type="submit">Login</button>
+  </form>
+  <a href="register.html" id="sign-up-link">Or sign-up if you don't have a user yet</a>
+  <p class="message" id="login-message"></p>
+</div>
+</main>
+
+
+<script src="login.js"></script>
+</body>
+</html>

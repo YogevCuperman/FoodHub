@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="recipe-display.css">
+  <title>Recipe Display</title>
+</head>
+<body>
+<nav class="navbar">
+  <ul>
+    <li><a href="recipes-feed.html">Feed</a></li>
+    <li><a href="add-recipe.html">Add Recipe</a></li>
+    <li><a href="search-friends.html">Search Friends</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="our-vision.html">Our Vision</a></li>
+  </ul>
+  <ul>
+    <li><a href="admins-dashboard.html" class="admin-permission" hidden="hidden">Admin's Dashboard</a></li>
+  </ul>
+  <ul>
+    <li><a href="profile.html">Profile</a></li>
+    <li><a href="logout">Logout</a></li>
+  </ul>
+</nav>
+
+<main class="recipe-display-main profile-main">
+  <div class="profile-info">
+    <img id="recipe-picture-img" class="profile-picture">
+    <h1 class="profile-label" id="recipe-name-label"></h1>
+    <span class="dry-detail"><span class="dry-detail-em">Recipe by: </span><span id="author-email-label"></span></span>
+    <span class="dry-detail"><span class="dry-detail-em">Posted on: </span><span id="post-date-label"></span></span>
+  </div>
+  <div id="recipe-display-content-div" class="container feed-container">
+    <div class="dry-details-of-recipe">
+      <span class="dry-detail"><span class="dry-detail-em">Cooking time: </span><span id="detail-cookingTime"></span></span>
+      <span class="dry-detail"><span class="dry-detail-em">Dish kind: </span><span id="detail-dishKind"></span></span>
+      <span class="dry-detail"><span id="detail-removable" class="dry-detail-em">This dish is: </span><span id="detail-restrictions"></span></span>
+    </div>
+
+    <div class="ingredients-of-recipe">
+      <span id="ingredients-span" class="dry-detail"><u class="dry-detail-em">Ingredients: </u><br><span id="detail-ingredients"></span></span>
+    </div>
+
+    <div class="instructions-of-recipe">
+      <span id="instructions-span" class="dry-detail"><u class="dry-detail-em">Instructions: </u><br><span id="detail-instructions"></span></span>
+    </div>
+
+    <hr>
+
+    <div class="recipe-display-buttons">
+      <span class="dry-detail-em" id="likes-counter-span"></span>
+      <button id="recipe-like-button">Like</button>
+    </div>
+
+    <div class="flex-center-container">
+      <div id="recipe-comment-menu" class="comment-menu">
+        <input type="text" id="recipe-comment-input" placeholder="Write your thought...">
+        <button id="recipe-comment-share">Share Comment</button>
+      </div>
+    </div>
+
+    <hr>
+    <span class="dry-detail-em dry-detail">Comments:</span>
+    <hr>
+
+    <div class="comments-section">
+      <ul class="comments-list" id="comments-list"></ul>
+    </div>
+
+  </div>
+</main>
+<script src="recipeDisplay.js"></script>
+</body>
+</html>

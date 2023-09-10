@@ -1,0 +1,380 @@
+body, h1, h3, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;  /* Separates the two lists */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.profile-info .profile-label {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.container {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    margin-top: 1rem;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.tab-buttons-left,
+.tab-buttons-right {
+    display: flex;
+}
+
+.tab-header {
+    background-color: #e7e7e7;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 0.5rem;
+}
+
+.tab-header.active {
+    background-color: darkgray;
+}
+
+.tab-buttons-left .tab-header:last-child,
+.tab-buttons-right .tab-header:last-child {
+    margin-right: 0;
+}
+
+.tab-header:hover {
+    background-color: darkgray;
+}
+
+.feed-list {
+    list-style: none;
+}
+
+.feed-itemContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile--myRecipes-item,
+.profile--followers-item,
+.profile--following-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.profile--myRecipes-item:last-child,
+.profile--followers-item:last-child,
+.profile--following-item:last-child{
+    border-bottom: none; /* Removing border from the last item */
+}
+
+.feed-itemText, .feed-itemButtonsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feed-itemButtonsDiv > button:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.feed-itemButton {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    background-color: orange;
+    border-radius: 4px;
+    font-weight: 500; /* Slightly bold */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+}
+
+.feed-itemName {
+    font-weight: bold;
+}
+
+.feed-picture {
+    width: 200px;
+}
+
+#profile-hr {
+    margin: 1rem 0;
+    border: 0.5px solid #dee2e6;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin: 0.5rem 0;
+}
+
+.form input {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.form input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.message {
+    margin-top: 1rem;
+    color: red;
+}
+
+/* Edit Profile Picture Form CSS */
+
+#profile--editPicture-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.regular-label {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.file-label {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: normal;
+    text-align: center;
+    width: 100%; /* full width like the input fields */
+    margin-top: 10px;
+}
+
+.file-label:hover {
+    background-color: darkorange;
+}
+
+#profile--editPicture-form input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#profile--editPicture-form input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+.file-input {
+    display: none; /* Hide the default file input */
+}
+
+#edit-file-label {
+    width: 40%;
+    background-color: darkgray;
+}
+
+#edit-file-label:hover {
+    background-color: gray;
+}
+
+
+#profile--editInfo-form {
+    max-width: 600px;  /* Define the maximum width of the form */
+    margin: 20px auto; /* Centers the form on larger screens */
+    padding: 20px;
+    background-color: #f7f7f7; /* Light gray background to match the previous design */
+    border-radius: 5px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Shadow effect from the previous design */
+}
+
+.regular-label {
+    font-weight: bold; /* Makes the "Edit profile information:" bold */
+    display: block;    /* Forces a new line after the label */
+    margin-bottom: 15px;
+    color: orange;     /* Makes the text orange */
+}
+
+#profile--editInfo-form label {
+    display: block;    /* Forces a new line after each label */
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#profile--editInfo-form input[type="text"],
+#profile--editInfo-form input[type="password"] {
+    width: 100%; /* Full width within the form */
+    padding: 10px;
+    border: 2px solid orange; /* Orange border to match the theme */
+    border-radius: 4px;
+    box-sizing: border-box;   /* Includes padding and border in width */
+}
+
+#profile--editInfo-form input[type="submit"] {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#profile--editInfo-form input[type="submit"]:hover {
+    background-color: darkorange; /* Slight color change on hover for feedback */
+}
+
+#edit-info-message {
+    color: red;      /* Error messages often in red, can adjust if needed */
+    margin-top: 10px;
+    text-align: center; /* Centers the message text */
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .profile-main {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .profile-info {
+        width: 100%;
+        align-items: start;
+    }
+
+    .tab-buttons {
+        flex-direction: column;
+    }
+
+    .tab-buttons-left,
+    .tab-buttons-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .tab-header {
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}

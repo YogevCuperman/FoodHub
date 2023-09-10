@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recipes-feed.css">
+    <title>Recipes Feed</title>
+</head>
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="recipes-feed.html">Feed</a></li>
+        <li><a href="add-recipe.html">Add Recipe</a></li>
+        <li><a href="search-friends.html">Search Friends</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="our-vision.html">Our Vision</a></li>
+    </ul>
+    <ul>
+        <li><a href="admins-dashboard.html" class="admin-permission" hidden="hidden">Admin's Dashboard</a></li>
+    </ul>
+    <ul>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="logout">Logout</a></li>
+    </ul>
+</nav>
+
+<main class="feed-main">
+    <div id="share-post-div">
+        <button id="post-recipe-button">Post a new recipe</button>
+    </div>
+    <div id="recipes-feed-container" class="container feed-container">
+        <ul class="feed-list" id="recipe-feed-list"></ul>
+    </div>
+</main>
+<script src="recipesFeed.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+body, h1, h3, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    overflow: hidden;
+    padding: 16px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;  /* Separates the two lists */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 25px 5%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 165, 0, 0.9);
+    margin-bottom: 15px;
+}
+
+.profile-label, .dry-detail-em, .comments-list li {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+}
+
+.dry-detail {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+button, input[type="submit"], input[type="button"] {
+    background-color: rgba(255, 165, 0, 0.9);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: darkorange;
+    transform: scale(1.05);
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);  /* Adjust this line to change the border color. */
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.comments-list {
+    list-style-type: none;
+}
+
+.comments-list li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.comments-list li:last-child {
+    border-bottom: none;
+}
+
+#recipe-like-button::before {
+    content: '\2665';  /* This is a unicode character for a heart. */
+    margin-right: 8px;
+    font-size: 30px; /* Adjust this value to make the heart bigger or smaller. */
+    color: darkorange;
+}
+
+#recipe-like-button.liked::before {
+    color: red;
+}
+
+.recipe-display-buttons {
+    margin-bottom: 20px; /* Adjust this as per your needs */
+}
+
+#recipe-comment-input {
+    width: 98%;
+}
+
+#recipe-comment-share {
+    /* make it centered to screen */
+    display: block;
+    margin: 0 auto;
+}
+
+#likes-counter-span {
+    margin-right: 20px;
+}
+
+.comment-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.name-label {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.comment-content {
+    font-weight: normal;
+    font-style: italic;
+    word-break: break-word;
+    text-wrap: none;
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 30px 5%;
+    }
+
+    .profile-label, .dry-detail-em {
+        font-size: 20px;
+    }
+
+    .dry-detail {
+        font-size: 18px;
+    }
+
+    button, input[type="submit"], input[type="button"] {
+        font-size: 18px;
+    }
+
+    input[type="text"], textarea {
+        font-size: 18px;
+    }
+}
